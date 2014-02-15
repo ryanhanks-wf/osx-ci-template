@@ -1,6 +1,6 @@
 # OS X CI builder
 
-This template and scripts prepare an OS X installer media image and uses that image to create a vmware vm and a vagrant box.
+The template and scripts here prepare an OS X installer media image and uses that image to create a vmware vm and a vagrant box for running CI tasks and testing task as they get ran in a CI environment.
 
 This also configures the machine such that it can be used out of the box with [Vagrant](http://www.vagrantup.com) and the [Hashicorp VMware Fusion provider](http://www.vagrantup.com/vmware). This requires at least Vagrant 1.3.0 and vagrant-vmware-fusion 0.8.2.
 
