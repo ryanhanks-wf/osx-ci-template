@@ -2,6 +2,13 @@
 
 The template and scripts here prepare an OS X installer media image and uses that image to create a vmware vm and a vagrant box for running CI tasks and testing task as they get ran in a CI environment.
 
+1. Get OS X Mavericks Installer App
+2. Prepare the CI machine's installer media
+  `sudo prepare_iso/prepare_iso.sh "/Applications/Install OS X Mavericks.app" out`
+3. Use packer to run the installer, provision the machine, and optionally package as a box for use with vagrant.
+
+## Original Readme
+
 This also configures the machine such that it can be used out of the box with [Vagrant](http://www.vagrantup.com) and the [Hashicorp VMware Fusion provider](http://www.vagrantup.com/vmware). This requires at least Vagrant 1.3.0 and vagrant-vmware-fusion 0.8.2.
 
 Provisioning steps that are defined in the template via items in the [scripts](https://github.com/timsutton/osx-vm-templates/tree/master/scripts) directory:
