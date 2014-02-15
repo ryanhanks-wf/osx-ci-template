@@ -2,10 +2,12 @@
 
 The template and scripts here prepare an OS X installer media image and uses that image to create a vmware vm and a vagrant box for running CI tasks and testing task as they get ran in a CI environment.
 
-1. Get OS X Mavericks Installer App
-2. Prepare the CI machine's installer
+#### 1. Get OS X Mavericks Installer .App
+#### 2. Build OS X Installer
+We need to build an installer image that packer will run to create our new VM from. This installer will run through the OS X Mavericks install process and then runs some scripts on the newly created VM to provision it.
 ``` sudo prepare_iso/prepare_iso.sh "/Applications/Install OS X Mavericks.app" out ```
-3. Use packer to build a new vm from the installer, provision the new machine, and optionally package as a .box for use with vagrant.
+#### 3. Use packer to run the installer and provision a new vm or vagrant box.
+
 
 ## Original Readme
 
