@@ -7,7 +7,10 @@ The template and scripts here prepare an OS X installer media image and uses tha
 We need to build an installer image that packer will run to create our new VM from. This installer will run through the OS X Mavericks install process and then runs some scripts on the newly created VM to provision it.
 ``` sudo prepare_iso/prepare_iso.sh "/Applications/Install OS X Mavericks.app" out ```
 #### 3. Use packer to run the installer and provision a new vm or vagrant box.
-
+```
+✗ cd packer
+✗ packer build template.json
+```
 
 ## Original Readme
 
