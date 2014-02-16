@@ -1,4 +1,7 @@
+#!/usr/bin/env zsh
+
 build_id=build-$1
+echo $build_id
 
 sudo prepare_iso/prepare_iso.sh "/Applications/Install OS X Mavericks.app" build/$build_id
 
