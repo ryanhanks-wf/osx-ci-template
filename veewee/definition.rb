@@ -5,7 +5,7 @@ Veewee::Definition.declare({
   :disk_format => 'VDI',
   :hostiocache => 'off',
   # Currently supported os_type_ids: Darwin_10_7, Darwin_10_7_64, Darwin_10_8_64
-  :os_type_id => 'Darwin_10_8_64',
+  :os_type_id => 'Darwin_10_9_0'
   # iso_file must be the output of the prepare_veewee_iso.sh script included with this template,
   # which modifies an installer downloaded from the Mac App Store for a fully-automated install
   :iso_file => "%OSX_ISO%",
