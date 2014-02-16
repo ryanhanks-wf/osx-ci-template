@@ -11,6 +11,15 @@ We need to build an installer image that packer will run to create our new VM fr
 ✗ cd packer
 ✗ packer build template.json
 ```
+Add the vm to vagrant
+```
+vagrant box add osx-42 ~/src/Others/osx-vm-templates/packer/packer_vmware_vmware.box
+```
+### 4. Use the VM
+```
+vagrant init osx-42
+vagrant up --provider vmware_fusion
+```
 
 ## Original Readme
 
