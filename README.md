@@ -1,6 +1,27 @@
-# OS X templates for Packer and VeeWee
+# OS X CI builder
 
-This is a set of templates and scripts that will prepare an OS X installer media that performs an unattended install for use with [Packer](http://packer.io) and [VeeWee](http://github.com/jedi4ever/veewee). These were originally developed for VeeWee.
+The template and scripts here prepare an OS X installer media image and uses that image to create a vmware vm and a vagrant box for running CI tasks and testing task as they get ran in a CI environment.
+
+#### 1. Get OS X Mavericks Installer .App
+#### 2. Build OS X Installer
+We need to build an installer image that packer will run to create our new VM from. This installer will run through the OS X Mavericks install process and then runs some scripts on the newly created VM to provision it.
+``` sudo prepare_iso/prepare_iso.sh "/Applications/Install OS X Mavericks.app" out ```
+#### 3. Use packer to run the installer and provision a new vm or vagrant box.
+```
+✗ cd packer
+✗ packer build template.json
+```
+Add the vm to vagrant
+```
+vagrant box add osx-42 ~/src/Others/osx-vm-templates/packer/packer_vmware_vmware.box
+```
+### 4. Use the VM
+```
+vagrant init osx-42
+vagrant up --provider vmware_fusion
+```
+
+## Original Readme
 
 This also configures the machine such that it can be used out of the box with [Vagrant](http://www.vagrantup.com) and the [Hashicorp VMware Fusion provider](http://www.vagrantup.com/vmware). This requires at least Vagrant 1.3.0 and vagrant-vmware-fusion 0.8.2.
 
