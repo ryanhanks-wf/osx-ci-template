@@ -7,6 +7,9 @@ The template and scripts here prepare an OS X installer media image and uses tha
   * VMware Fusion
   * Vagrant
   * Vagrant VMware Fusion plugin
+   * ``` vagrant plugin install vagrant-vmware-fusion ```
+     
+   * ``` vagrant plugin license vagrant-vmware-fusion license.lic ```
   * Packer
 
 #### 2. Build OS X Installer
