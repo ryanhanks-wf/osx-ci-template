@@ -1,5 +1,5 @@
 
-var template = require('./packer/template.json');
+var template = require('../packer/template.json');
 
 var sys = require('sys')
 var exec = require('child_process').exec;
@@ -11,7 +11,7 @@ exec("md5 -q build/" + build_id + "/OSX_InstallESD_10.9_13A603.dmg", function(er
   var md5 = stdout.toString().trim();
 
   template['builders'][0]['iso_checksum'] = md5;
-  template['builders'][0]['iso_url'] = "file:///Users/ryanhanks/Development/osx-vm-templates/build/"+ build_id + "/OSX_InstallESD_10.9_13A603.dmg";
+  template['builders'][0]['iso_url'] = "file:///Users/ryanhanks/Development/osx-ci-template/build/"+ build_id + "/OSX_InstallESD_10.9_13A603.dmg";
 
   var outputFilename = 'build/' + build_id + '/template.json';
 
