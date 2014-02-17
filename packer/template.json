@@ -61,6 +61,6 @@
     }
   ],
   "variables": {
-    "autologin_vagrant_user": ""
+    "autologin_vagrant_user": "true"
   }
 }
